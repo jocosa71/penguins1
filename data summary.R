@@ -20,5 +20,7 @@ penguins_raw2 %>%
   group_by(species) %>% 
   summarize(
     mean_mass = mean(body_mass_g, na.rm = TRUE),
-    sd_mass = sd(body_mass_g, na.rm = TRUE)
+    sd_mass = sd(body_mass_g, na.rm = TRUE), 
+    max_mass = max(body_mass_g, na.rm = TRUE),
+    min_mass = min(body_mass_g, na.rm = TRUE)
   )
